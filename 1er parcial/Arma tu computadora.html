@@ -1,0 +1,176 @@
+<html>
+	<head>
+		<title> Arma tu computadora </title>
+		<script language="javascript">
+		function yu()
+		{
+		//lee radios
+		if(pc.gab[0].checked==true) {A1=618;} else {A1=0;}
+		if(pc.gab[1].checked==true) {A2=1700;} else {A2=0;}
+		if(pc.gab[2].checked==true) {A3=588;} else {A3=0;}
+		if(pc.gab[3].checked==true) {A4=1700;} else {A4=0;}
+		XA=A1+A2+A3+A4;
+		
+		if(pc.pro[0].checked==true) {B1=900;} else {B1=0;}
+		if(pc.pro[1].checked==true) {B2=1900;} else {B2=0;}
+		if(pc.pro[2].checked==true) {B3=2600;} else {B3=0;}
+		if(pc.pro[3].checked==true) {B4=6700;} else {B4=0;}
+		if(pc.pro[4].checked==true) {B5=8700;} else {B5=0;}
+		XB=B1+B2+B3+B4+B5;
+		
+		//lee select
+		C=parseInt(pc.mb.value);
+		
+		//lee radios
+		if(pc.disc[0].checked==true) {D1=520;} else {D1=0;}
+		if(pc.disc[1].checked==true) {D2=650;} else {D2=0;}
+		if(pc.disc[2].checked==true) {D3=880;} else {D3=0;}
+		if(pc.disc[3].checked==true) {D4=330;} else {D4=0;}
+		XD=D1+D2+D3+D4;
+		
+		if(pc.mem[0].checked==true) {E1=390;} else {E1=0;}
+		if(pc.mem[1].checked==true) {E2=500;} else {E2=0;}
+		if(pc.mem[2].checked==true) {E3=800;} else {E3=0;}
+		if(pc.mem[3].checked==true) {E4=800;} else {E4=0;}
+		XE=E1+E2+E3+E4;
+		
+		//lee select
+		F=parseInt(pc.moni.value);
+		
+		//leyendo checkbox
+		if(pc.acc1.checked==true) {G1=291;} else {G1=0;}
+		if(pc.acc1.checked==true) {G2=2240;} else {G2=0;}
+		if(pc.acc1.checked==true) {G3=1070;} else {G3=0;}
+		if(pc.acc1.checked==true) {G4=900;} else {G4=0;}
+		XG=G1+G2+G3+G4;
+		
+		//suma todos los totales de los input radios, checkbox y select
+		GG=XA+XB+C+XD+XE+F+XG;
+		
+		//convierto a dólares
+		GG2=GG/20.00;
+		
+		//asigno totales al form
+		pc.tot1.value=GG;
+		pc.tot2.value=GG2;
+		}
+		</script>
+	</head>
+	<body bgcolor="FF69B4">	
+	<br>
+	<hr color="white" size="5">
+	<table bgcolor="FBCMFB">
+	<tr>
+		<td width="40%"> <center> <img src="https://www.speedcomputers.com.ar/wp-content/uploads/2021/10/ReparacionPC.png" width="300" height="200"> </center> </td>
+		<td width="60%"> <center> <font face="calibri" color="1B7C80" size="7"> <b> TODO PARA TU COMPUTADORA </b> </font> <br>
+		<font face="arial" color="black" size="5"> <b> Selecciona los componentes de tu preferencia y arma la computadora a tu gusto </b> </font>
+		<hr>
+		
+		<font face="arial" color="black" size="4"> Gabinetes, Mother Boards, Procesadores, Memorias, Monitores, Discos Duros, Perifericos y Accesorios </font> </center> </td>
+	</tr>
+	</table>
+	<hr color="white" size="5" width="100%">
+	<br>
+	<form name="pc">
+	<table bgcolor="white" width="100%">
+		<tr>
+			<td width="33%">
+			<hr>
+			<font face="arial" color="black" size="4"> <b> GABINETE </b> </font> ...
+			<marquee scrollamount="3"> <img src="" width="4%"> ... <img src="" width="10%"> ... <img src="" width="8%"> ... <img src="" width="10%"> </marquee>
+			<hr>
+			<font face="arial" size="4">
+			<input type="radio" name="gab" onclick="yu();"> Minitorre 618.00 <br>
+			<input type="radio" name="gab" onclick="yu();"> Torre 1,700.00 <br>
+			<input type="radio" name="gab" onclick="yu();"> Desktop 588.00 <br>
+			<input type="radio" name="gab" onclick="yu();"> Gamer 1,700.00 <br> </font>
+			<hr>
+			<center>
+			<font face="arial" color="black" size="4"> <b> PROCESADOR </b> </font>
+			</center>
+			<hr>
+			<font face="arial" size="4">
+			<input type="radio" name="pro" onclick="yu();"> Celeron 900.00 <br>
+			<input type="radio" name="pro" onclick="yu();"> i3 1,900.00 <br>
+			<input type="radio" name="pro" onclick="yu();"> i5 2,600.00 <br>
+			<input type="radio" name="pro" onclick="yu();"> i7 6,700.00 <br>
+			<input type="radio" name="pro" onclick="yu();"> i9 8,700.00 <br> </font>
+			<hr>
+			<center>
+			<font face="arial" color="black" size="4"> <b> MOTHER BOARD </b> </font>
+			</center>
+			<hr>
+			<select name="mb" onchange="yu();">
+			<option value="900"> Estandar 900.00 </option>
+			<option value="1700"> Profesional 1700.00 </option>
+			<option value="3400"> Enterprice 3400.00 </option>
+			<option value="4500"> Gamer 4500.00 </option>
+			</select>
+			</td>
+			
+			<td width="33%">
+			<hr>
+			<center>
+			<font face="arial" color="black" size="4"> <b> DISCO DURO </b> </font>
+			</center>
+			<hr>
+			<font face="arial" size="4">
+			<input type="radio" name="disc" onclick="yu();"> 500 GB 520.00 <br>
+			<input type="radio" name="disc" onclick="yu();"> 750 GB 650.00 <br>
+			<input type="radio" name="disc" onclick="yu();"> 1 TB 880.00 <br>
+			<input type="radio" name="disc" onclick="yu();"> 250 GB SSD 330.00 <br>
+			</font>
+			<hr>
+			<font face="arial" color="black" size="4"> <b> MEMORIA </b> </font>
+			<hr>
+			<font face="arial" size="4">
+			<input type="radio" name="mem"> 4 GB <br>
+			<input type="radio" name="mem"> 8 GB <br>
+			<input type="radio" name="mem"> 16 GB <br>
+			<input type="radio" name="mem"> 32 GB <br>
+			</font> <br>
+			<hr>
+			
+			<font face="arial" color="black" size="4"> <b> MONITOR </b> </font>
+			<hr>
+			<select name="moni" onchange="yu();">
+			<option value="1,000.00"> 15" 1,000.00 </option>
+			<option value="1,140.00"> 21" 1,140.00 </option>
+			<option value="1,650.00"> 23" 1,650.00 </option>
+			<option value="2,700.00"> 27" 2,700.00 </option>
+			</select>
+			</td>
+			
+			<td width="33%">
+			<hr>
+			<center>
+			<font face="arial" color="black" size="4"> <b> PERIFERICOS Y ACCESORIOS </b> </font> <br>
+			</center>
+			<hr>
+			<input type="checkbox" name="acc1" onclick="yu();"> Teclado y mouse inalámbricos 291.00 <br>
+			<input type="checkbox" name="acc2" onclick="yu();"> Bocinas soundround 2,240.00 <br>
+			<input type="checkbox" name="acc3" onclick="yu();"> Cámara web 1,070.00 <br>
+			<input type="checkbox" name="acc4" onclick="yu();"> Diadema 900.00 <br>
+			<input type="checkbox" name="acc5" onclick="yu();"> Scanner 1,820.00 <br>
+			<input type="checkbox" name="acc6" onclick="yu();"> Impresora láser BN 2,500.00 <br>
+			<input type="checkbox" name="acc7" onclick="yu();"> Impresora de inyección color 2,700.00 <br>
+			<input type="checkbox" name="acc8" onclick="yu();"> Joystick 960.00 <br>
+			<input type="checkbox" name="acc9" onclick="yu();"> Memoria USB 8GB 70.00 <br>
+			<input type="checkbox" name="acc10" onclick="yu();"> Regulador 800.00 <br>
+			<input type="checkbox" name="acc11" onclick="yu();"> Sistema Operativo Windows Home 2,400.00 <br>
+			<input type="checkbox" name="acc12" onclick="yu();"> Office 365 Personal 1,300.00 <br>
+			<input type="checkbox" name="acc13" onclick="yu();"> Vacuna antivirus 450.00 <br>
+			<hr>
+			
+			<center>
+				<button type="button"> Calcular el precio en pesos </button> <br> <br>
+				Tipo de cambio (Dlls <...> Pesos): <input type="text" name="conversion"> <br> <br>
+				<button type="button"> Calcular el precio en dólares </button>
+				<hr>
+				
+				Total: <input type="text" name="tot1" size="5"> Pesos
+				<input type="text" name="tot2" size="5"> Dólares
+			</center>	
+	</form>
+	</body>
+</html>

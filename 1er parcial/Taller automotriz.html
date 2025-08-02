@@ -1,0 +1,133 @@
+<html>
+	<head>
+		<title> Taller automotriz </title>
+	<script language="javascript">
+	
+	function envdat()
+	{
+
+	if (NegAuto.tipser1.checked==true) {A1=1000;} else {A1=0;}
+	if (NegAuto.tipser2.checked==true) {A2=3000;} else {A2=0;}
+	if (NegAuto.tipser3.checked==true) {A3=2500;} else {A3=0;}
+	if (NegAuto.tipser4.checked==true) {A4=4000;} else {A4=0;}
+	if (NegAuto.tipser5.checked==true) {A5=400;} else {A5=0;}
+	if (NegAuto.tipser6.checked==true) {A6=400;} else {A6=0;}
+	if (NegAuto.tipser7.checked==true) {A7=450;} else {A7=0;}
+	if (NegAuto.tipser8.checked==true) {A8=3000;} else {A8=0;}
+	TTA=A1+A2+A3+A4+A5+A6+A7+A8;
+	
+	if (NegAuto.tipmot[0].checked==true) {B1=0;} else {B1=0;}
+	if (NegAuto.tipmot[1].checked==true) {B2=0.25;} else {B2=0;}
+	if (NegAuto.tipmot[2].checked==true) {B3=0.50;} else {B3=0;}
+	TTB=B1+B2+B3;
+	
+	if (NegAuto.tipaut[0].checked==true) {C1=0;} else {C1=0;}
+	if (NegAuto.tipaut[1].checked==true) {C2=0.30;} else {C2=0;}
+	if (NegAuto.tipaut[2].checked==true) {C3=0.50;} else {C3=0;}
+	if (NegAuto.tipaut[3].checked==true) {C4=0.50;} else {C4=0;}
+	if (NegAuto.tipaut[4].checked==true) {C5=0.70;} else {C5=0;}	
+	TTC=C1+C2+C3+C4+C5;
+
+	D=NegAuto.reqFac.value;
+	if (D=="si" || D=="SI") {H2=1.16;} else {H2=1;}
+	
+	E=NegAuto.tipcon.value;
+	
+	var subTOT=TTA + (TTA*TTB)+(TTA*TTC) + (TTA*E);
+	
+	var TOT=subTOT*H2;
+	
+	NegAuto.ttt.value=TOT;
+	
+	}
+
+	</script>
+	</head>
+	<body bgcolor="blue">
+	<br>
+
+    <hr color="white" width="80%">
+<center>
+<table width="60%">
+ <tbody><tr>
+ <td width="25%">
+    <img src="./Taller Automotriz_files/herr.jpg" width="100%" height="400%">
+    </td>
+<td width="75%">
+   
+<font color="white" size="6" face="Comic sans MS">TALLER AUTOMOTRIZ</font>  
+<hr color="white">
+<a href="https://goo.gl/maps/8cR8E1Yi3kTrd7yC6"><font color="white" size="3" face="Comic sans MS">Direccion</font></a><br>
+<font color="white" size="3" face="Comic sans MS">Telefono:81 1060 2733</font><br>
+<font color="black" size="5" face="Comic sans MS"><marquee bgcolor="#ADD8E6" width="80%" scrollamount="4">Reparacion de motores,mecanica general, afinacion,frenos,suspension!!!</marquee></font><br>
+
+</td>
+</tr>
+</tbody></table>
+</center>
+<br>
+<hr color="white" width="80%">
+<center>
+<form name="NegAuto">
+<table width="85%" border="1">
+<tbody><tr>
+<td width="33%">
+
+    <font color="white" size="5" face="Comic sans MS">   <h3> SERVICIOS</h3></font>
+    <input type="checkbox" name="tipser1" onclick="envdat();"><font color="white" size="4" face="Comic sans MS">Cambio de Aceite y filtro.   1000.00</font><br>
+    <input type="checkbox" name="tipser2"  onclick="envdat();"><font color="white" size="4" face="Comic sans MS">Afinacion General. 3000.00</font><br>
+    <input type="checkbox" name="tipser3"  onclick="envdat();"><font color="white" size="4" face="Comic sans MS">Mantenimiento a Aire Acondicionado. 2500.00</font><br>
+    <input type="checkbox" name="tipser4"  onclick="envdat();"><font color="white" size="4" face="Comic sans MS">Servicio de Frenos. 4000.00</font><br>
+    <input type="checkbox" name="tipser5"  onclick="envdat();"><font color="white" size="4" face="Comic sans MS">Sustitucion del Filtro de aceite. 400.00</font><br>
+    <input type="checkbox" name="tipser6"  onclick="envdat();"><font color="white" size="4" face="Comic sans MS">Alineacion y Balaceo. 400.00</font><br>
+    <input type="checkbox" name="tipser7"  onclick="envdat();"><font color="white" size="4" face="Comic sans MS">Sistema de Enfriamiento. 450.00</font><br>
+    <input type="checkbox" name="tipser8"  onclick="envdat();"><font color="white" size="4" face="Comic sans MS">Amortiguadores. 3000.00</font><br>
+</td>
+
+    <td width="33%">
+        <font color="white" size="5" face="Comic sans MS"><h3> TIPO DE MOTOR</h3></font>
+<input type="radio" name="tipmot"  onclick="envdat();">  <font color="white" size="4" face="Comic sans MS"> 4 cilindros +0%</font><br>
+<input type="radio" name="tipmot"  onclick="envdat();">  <font color="white" size="4" face="Comic sans MS"> 6 cilindros +25%</font><br>
+<input type="radio" name="tipmot"  onclick="envdat();">  <font color="white" size="4" face="Comic sans MS"> 8 cilindros +50%</font><br>
+<hr>
+       
+            <font color="white" size="5" face="Comic sans MS"><h3> TIPO DE AUTO</h3></font>
+<input type="radio" name="tipaut"  onclick="envdat();">  <font color="white" size="4" face="Comic sans MS"> Sedan +0%</font><br>
+<input type="radio" name="tipaut"  onclick="envdat();">  <font color="white" size="4" face="Comic sans MS"> Lujo +30%</font><br>
+<input type="radio" name="tipaut"  onclick="envdat();">  <font color="white" size="4" face="Comic sans MS"> Deportivo +50%</font><br>
+<input type="radio" name="tipaut"  onclick="envdat();">  <font color="white" size="4" face="Comic sans MS"> Familiar +50%</font><br>
+<input type="radio" name="tipaut"  onclick="envdat();">  <font color="white" size="4" face="Comic sans MS"> Camioneta +70%</font><br>
+<hr>
+    </td>
+<td width="33%">
+    <font color="white" size="5" face="Comic sans MS"><h3> AGENDA TU CITA</h3></font>
+    <font color="white" size="4" face="Comic sans MS"> Marca:</font><input type="text" name="marca" size="9"><br>
+        <font color="white" size="4" face="Comic sans MS"> Modelo:</font><input type="text" name="modelo" size="9"><br>
+            <font color="white" size="4" face="Comic sans MS"> AÑO :</font><input type="text" name="Año" size="9"><br>
+                <font color="white" size="4" face="Comic sans MS"> Kilometraje:</font><input type="text" name="kilome" size="9"><br><br>
+                    <font color="white" size="4" face="Comic sans MS"> Requiere factura? (si o no) +16%:</font><input type="text" name="reqFac" size="9"   onchange="envdat();" >
+
+                    <font color="white" size="5" face="Comic sans MS">   <h3> TIPO DE PAGO</h3></font>
+<select name="tipcon"  onchange="envdat();">
+    <option value=-0.05>EFECTIVO -5% </option>
+    <option value=0.05> TARJETA DE CREDITO O DEBITO +5%</option>
+    <option value=0.1>TRANSFERENCIA ELECTRONICA +10</option>
+    <option value=0>CREDITO A 3 MESES +0%</option>
+</select>
+
+<hr>
+</td>
+</tr>
+
+</table>
+<br>
+<center>
+    <font color="white" size="3" face="arial black"> TOTAL: </font>
+<input type="text" name="ttt" size=5>
+<hr>
+</center>
+</form>
+<hr width="30%">
+    </center>
+</body>
+</html>
